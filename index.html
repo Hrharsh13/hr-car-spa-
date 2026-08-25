@@ -52,6 +52,39 @@
         <a href="#pricing" class="btn">VIEW SERVICES</a>
 
     </section>
+<section class="photo-slider">
+
+    <div class="slider-container">
+
+        <div class="slide active">
+            <img src="images/car-wash.png" alt="HR Car Spa Car Wash">
+        </div>
+
+        <div class="slide">
+            <img src="images/car-detailing.png" alt="HR Car Spa Car Detailing">
+        </div>
+
+        <div class="slide">
+            <img src="images/bike-wash.png" alt="HR Car Spa Bike Wash">
+        </div>
+
+        <div class="slide">
+            <img src="images/car-polishing.png" alt="HR Car Spa Car Polishing">
+        </div>
+
+        <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+</section>
 
     <section id="services">
 
@@ -201,5 +234,46 @@
     </p>
 
 </footer>
+<script>
+let slideIndex = 1;
+
+showSlide(slideIndex);
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+    let slides = document.querySelectorAll(".slide");
+    let dots = document.querySelectorAll(".dot");
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+}
+
+setInterval(() => {
+    changeSlide(1);
+}, 4000);
+</script>
 </body>
 </html>
