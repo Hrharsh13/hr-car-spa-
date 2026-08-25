@@ -29,21 +29,55 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+<section class="photo-slider">
 
-    <section class="hero">
+    <div class="slider-container">
 
-        <p class="small-title">PREMIUM CAR & BIKE CARE</p>
+        <div class="slide active">
+            <img src="images/car-wash.png" alt="HR Car Spa Car Wash">
+        </div>
 
-        <h1>HR <span>CAR SPA</span></h1>
+        <div class="slide">
+            <img src="images/car-detailing.png" alt="HR Car Spa Car Detailing">
+        </div>
 
-        <p class="hero-text">
-            Professional Car & Bike Washing Centre
-        </p>
+        <div class="slide">
+            <img src="images/bike-wash.png" alt="HR Car Spa Bike Wash">
+        </div>
 
- 
-        <a href="#pricing" class="btn">VIEW SERVICES</a>
+        <div class="slide">
+            <img src="images/car-polishing.png" alt="HR Car Spa Car Polishing">
+        </div>
 
-    </section>
+        <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+</section>
+
+<section class="hero">
+
+    <p class="small-title">PREMIUM CAR & BIKE CARE</p>
+
+    <h1>HR <span>CAR SPA</span></h1>
+
+    <p class="hero-text">
+        Professional Car & Bike Washing Centre
+    </p>
+
+    <a href="#pricing" class="btn">VIEW SERVICES</a>
+
+</section>
+<section id="services">
+
 <section class="photo-slider">
 
     <div class="slider-container">
